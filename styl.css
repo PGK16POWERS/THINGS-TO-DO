@@ -1,0 +1,257 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a, li {
+    text-decoration: none;
+    list-style: none;
+}
+:root {
+    --monts: 'Montserrat', sans-serif;
+    --nuns: 'Nunito Sans', sans-serif;
+}
+body {
+    overflow-x: hidden;
+    background-image: url(/photos/gautam-suri-NdIDPF-fOfw-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0 -16rem;
+}
+/**** HEADER SECTION ****/
+header {
+    height: 15vh;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+header ul {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 3rem;
+}
+header ul li a {
+    font-size: 1.5em;
+    font-family: var(--monts);
+    font-weight: 300;
+    color: rgb(70, 174, 248);
+}
+.isSelected {
+    border-bottom: 2px solid rgb(70, 174, 248);
+    padding-bottom: 7px ;
+}
+h1 {
+    font-size: 1.5em;
+    letter-spacing: 1.5px;
+    font-family: var(--monts);
+    font-weight: 400;
+}
+@media (max-width: 800px) {
+    header {
+        height: 15vh;
+        justify-content: center;
+    }
+    header ul li a {
+        font-size: 1.6em;
+    }
+    h1 {
+        font-size: 1.1em;
+    }
+}
+/**** HEADER SECTION ****/
+/**** CENTER SECTION ****/
+#index-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 90vh;
+}
+.curr-date-div {
+    background-color: dodgerblue;
+    border: 0 solid transparent;
+    border-radius: 5px;
+    padding: 2rem 0;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+}
+.checklistParent, .checklistParentWork {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8rem;
+    margin: 1.5rem 0;
+}
+#new-text, #work-text {
+    height: 80%;
+    width: 80%;
+    text-align: center;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    font-family: var(--monts);
+    font-weight: 400;
+    border-bottom: 2px solid dodgerblue;
+    border-top: 0 solid transparent;
+    border-left: 0 solid transparent;
+    border-right: 0 solid transparent;
+}
+#new-text:focus,
+#work-text:focus {
+    border-bottom-color: dodgerblue;
+    outline: none;
+}
+.defaultDiv {
+    position: relative;
+    width: 400px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    border: 0 solid transparent;
+    border-radius: 5px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 0.7rem;
+    align-items: center;
+}
+.tododiv {
+    position: relative;
+    width: 400px;
+    min-height: 100px;
+    background-color: rgb(255, 255, 255);
+    border: 0 solid transparent;
+    border-radius: 5px;
+    display: flex;
+    padding: 1rem;
+    justify-content: flex-start;
+    column-gap: 1.5rem;
+    align-items: center;
+}
+.checkbox {
+    height: 50px;
+}
+#cancel {
+    position: absolute;
+    right: 16px;
+    color: rgb(184, 184, 184);
+    cursor: pointer;
+}
+#cancel:hover,
+#cancel:active {
+    color: rgb(227, 3, 3);
+}
+#add-circle {
+    font-size: 40px;
+    cursor: pointer;
+    color: dodgerblue;
+}
+.innertext {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-family: var(--monts);
+}
+@media (max-width: 800px) {
+    #index-content {
+        padding-top: 1rem ;
+        min-height: 80vh;
+    }
+    .curr-date-div {
+        padding: 2rem 0;
+        width: 90%;
+    }
+    #new-text, #work-text {
+        height: 80%;
+        width: 70%;
+        text-align: center;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        font-family: var(--monts);
+        font-weight: 400;
+        border-bottom: 2px solid dodgerblue;
+        border-top: 0 solid transparent;
+        border-left: 0 solid transparent;
+        border-right: 0 solid transparent;
+    }
+    .defaultDiv {
+        position: relative;
+        width: 90%;
+        height: 100px;
+        background-color: rgb(255, 255, 255);
+        border: 0 solid transparent;
+        border-radius: 5px;
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-evenly;
+        column-gap: 0.7rem;
+        align-items: center;
+    }
+    .checklistParent, .checklistParentWork {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.8rem;
+        margin: 1.5rem 0;
+        width: 90%;
+    }
+    .tododiv {
+        position: relative;
+        width: 100%;
+        min-height: 90px;
+        background-color: rgb(255, 255, 255);
+        border: 0 solid transparent;
+        border-radius: 5px;
+        display: flex;
+        padding: 1rem;
+        justify-content: flex-start;
+        column-gap: 1.5rem;
+        align-items: center;
+    }
+    .innertext {
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        font-weight: 400;
+        width: 75%;
+        font-family: var(--nuns);
+    }
+}
+/**** CENTER SECTION ****/
+/**** FOOTER SECTION ****/
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+footer p {
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    color: azure;
+    font-family: var(--monts);
+    font-weight: 400;
+}
+.addDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0 solid transparent;
+    border-radius: 0;
+    background-color: transparent;
+}
+.done{
+    text-decoration: line-through;
+}
+@media (max-width: 800px) {
+    footer {
+        position: sticky;
+        bottom: 0;
+        height: 5vh;
+    }
+    footer p {
+        font-size: 1em;
+        color: rgb(146, 162, 168);
+        font-family: var(--monts);
+        font-weight: 400;
+    }
+}
+/**** FOOTER SECTION ****/
