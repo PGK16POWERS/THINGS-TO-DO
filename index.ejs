@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>To Do List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styl.css">
+    <script defer src="jscript/index/jscript.js"></script>
+    <script defer src="jscript/index/addToLs.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+    <header>
+        <ul>
+            <li>
+                <a href="/" class="header-links"><span class="isSelected">Today</span></a>
+            </li>
+            <li>
+                <a href="/work" class="header-links">Work</a>
+            </li>
+        </ul>
+    </header>
+    
+<% const da2y = new Date(); %>
+<% const currDateNum = da2y.getDate(); %>
+
+<% const day = new Date(); %>
+<% const currDayOfWeek = day.getDay(); %>
+<% const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]; %>
+<% const dayName = daysOfTheWeek[currDayOfWeek]; %>
+
+<% const month = new Date(); %>
+<% const currMonth = month.getMonth(); %>
+<% const monthsOfTheYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]; %>
+<% const monthName = monthsOfTheYear[currMonth]; %>
+
+
+    <section id="index-content">
+        <div class="curr-date-div">
+           <h1><%= dayName%> <%= currDateNum%>, <%= monthName%></h1>
+        </div>
+
+        <div class="checklistParent">
+            
+        </div>
+        <form class="defaultDiv" action="/create" method="post" id="creForm">
+            <input type="text" name="text" id="new-text" placeholder="New Item" required>
+            <button type="submit" class="addDiv">
+                <span class="material-symbols-outlined" id="add-circle">
+                    add_circle
+                </span>
+            </button>
+        </form>
+    </section>
+<%- include("partials/footer.ejs")%>
